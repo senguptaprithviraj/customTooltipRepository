@@ -1,0 +1,10 @@
+
+<div class="tooltip-container" (click)="showToolTip()" #tooltipRef>
+  <button type="button" class="btn btn-info tooltip-container__button">{{buttonText}}</button>
+  <span class="tooltip-container__text" *ngIf="isTooltipVisible" 
+  [ngClass]="{
+    'tooltip-container__above-element': showTooltipAbove,
+    'tooltip-container__below-element': !showTooltipAbove
+  }">Tooltip text</span>
+</div>
+
